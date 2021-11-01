@@ -1,17 +1,22 @@
 import cityApi from 'api/cityApi';
+import Loading from 'components/Loading';
 import { City, ListResponse } from 'models';
 import React, { useEffect, useState } from 'react';
 
 const HomePage = () => {
   const [cityList, setCityList] = useState([] as City[]);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
       const { data }: ListResponse<City> = await cityApi.getAll();
       setCityList(data);
+      setLoading(false);
     })();
   }, []);
+
+  if (loading) return <Loading />;
 
   const handleActiveClick = (id: number) => {
     setActiveIndex(id);
