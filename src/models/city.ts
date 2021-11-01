@@ -3,7 +3,7 @@ export interface City {
   name: string;
   description: string;
   shortDescription: string;
-  image: string;
+  video: string;
   latitude: string;
   longitude: string;
   currency: string;

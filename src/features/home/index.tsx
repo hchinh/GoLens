@@ -42,7 +42,7 @@ const HomePage = () => {
         {cityList.map((city, idx) => (
           <img
             key={city.id}
-            src={city.image}
+            src={city.thumbnail}
             alt="image_city"
             className={`image-slide ${idx === activeIndex ? 'active' : ''}`}
           />
