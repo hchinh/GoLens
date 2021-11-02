@@ -1,9 +1,10 @@
 :root {
-  --light-text-color: #e3f2fd;
+  --light-text-color: #fff;
   --primary-color: #42a5f5;
   --secondary-color: #1e88e5;
   --third-color: #90caf9;
   --active-color: #bbdefb;
+  --navigation-button-color: #e3f2fd;
 }
 
 html {
@@ -86,7 +87,7 @@ section {
   z-index: 777;
   content: '';
   position: absolute;
-  background: rgba(10, 100, 200, 0.3);
+  background: rgba(10, 100, 200, 0.12);
   width: 100%;
   height: 100%;
   top: 0;
@@ -96,7 +97,7 @@ section {
 .home .content {
   z-index: 888;
   color: var(--light-text-color);
-  width: 60%;
+  width: 50%;
   margin-top: 16rem;
   display: none;
 }
@@ -110,7 +111,7 @@ section {
   font-size: 5.5em;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.25rem;
   line-height: 7.5rem;
   margin-bottom: 4rem;
 }
@@ -191,7 +192,7 @@ section {
 .slider-navigation .nav-btn {
   width: 1.1rem;
   height: 1.1rem;
-  background: var(--light-text-color);
+  background: var(--navigation-button-color);
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 0 0.2rem rgba(255, 255, 255, 0.5);
@@ -218,7 +219,7 @@ section {
 
 .image-slide.active {
   clip-path: circle(150% at 0 50%);
-  transition: 1.8s ease-in;
+  transition: 1.5s ease-in;
   transition-property: clip-path;
 }
 
@@ -237,6 +238,7 @@ section {
 }
 
 .loading {
+  background-color: #090821;
   display: flex;
   justify-content: center;
   align-items: center;
